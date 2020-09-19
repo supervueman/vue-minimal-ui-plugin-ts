@@ -1,0 +1,15 @@
+.shadow {
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.shadow_error {
+  box-shadow: 0 0 20px rgba($error-color, 0.2);
+}
+
+.shadow_success {
+  box-shadow: 0 0 20px rgba($success-color, 0.2);
+}
+
+.shadow-card {
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, .3);
+}

@@ -1,0 +1,48 @@
+.container {
+  width: 100%;
+  max-width: $max-width;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: $gap;
+  padding-left: $gap;
+
+  @include media(lg) {
+    width: 992px;
+  }
+
+  @include media(md) {
+    width: 768px;
+  }
+
+  @include media(sm) {
+    width: 100%;
+  }
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@mixin col-style($i) {
+  width: 100% / $grid-columns * $i;
+  padding-right: $gap / 2;
+  padding-left: $gap / 2
+}
+
+@each $breakpoint, $px in $breakpoints {
+  @for $i from 1 through $grid-columns {
+    @if $breakpoint == lg {
+      .#{$breakpoint}-#{$i} {
+        @include col-style($i);
+      }
+    } @else {
+      @media (max-width: $px) {
+        .#{$breakpoint}-#{$i} {
+          @include col-style($i);
+        }
+      }
+    }
+  }
+}

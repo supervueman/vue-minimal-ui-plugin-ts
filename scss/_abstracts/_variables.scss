@@ -1,0 +1,83 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass variables.
+// -----------------------------------------------------------------------------
+
+
+
+
+
+/// Regular font family
+/// @type List
+$default-font: 'OpenSans',
+sans-serif;
+
+
+
+/// Copy text color
+/// @type Color
+$text-color: #000 !default;
+
+/// Main brand color
+/// @type Color
+$brand-color: #1FA5FF !default;
+$brand-lighten-color-1: #3DB1FF;
+$brand-lighten-color-2: #B8E2FF;
+$brand-darken-color-1: #0071BD;
+$brand-darken-color-2: #11496F;
+
+
+$light-color: #fff !default;
+$dark-color: #17669C !default;
+$gray-color: #787878 !default;
+$bold-gray-color: #6d767c;
+$light-gray-color: #BFBFBF;
+$light-gray-color-1: #ced6dc;
+$light-gray-color-2: #F2F2F2;
+
+$success-color: #00B806;
+$warning-color: #ED9132;
+$error-color: #F00000;
+
+$border-radius: 3px !default;
+
+$gap: 20px;
+
+
+
+/// Z-indexes map, gathering all Z layers of the application
+/// @access private
+/// @type Map
+/// @prop {String} key - Layer’s name
+/// @prop {Number} value - Z value mapped to the key
+$z-indexes: ('preloader': 6000, 'notification': 5500, 'modal': 5000, 'toolbar': 4000, 'navigation-drawer': 3000, 'navigation-drawer-underlay': 2900, 'content': 1000, 'overlay': 100, 'media-absolute': 50, 'default;': 1, 'below': -1, );
+
+
+
+
+
+/// Container's maximum width
+/// @type Length
+$max-width: 1240px !default;
+
+
+$grid-columns: 12;
+
+
+/// Breakpoints map
+/// @prop {String} keys - Keys are identifiers mapped to a given length
+/// @prop {Map} values - Values are actual breakpoints expressed in pixels
+$breakpoints: ('lg': 1240px, 'md': 992px, 'sm': 768px, 'xs': 100%) !default;
+
+
+
+
+
+
+/// Relative or absolute URL where all assets are served from
+/// @type String
+/// @example scss - When using a CDN
+///   $base-url: 'http://cdn.example.com/assets/';
+$base-url: '/assets/' !default;
+
+
+$cubic: cubic-bezier(.35, 0, 0, 1.01);
